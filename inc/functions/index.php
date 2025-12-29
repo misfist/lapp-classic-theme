@@ -32,6 +32,7 @@ function get_block_pattern_names_list() {
  */
 function get_block_pattern_content( string $name ) {
 	$registry = \WP_Block_Patterns_Registry::get_instance();
+
 	if ( ! $registry->is_registered( $name ) ) {
 		return null;
 	}
