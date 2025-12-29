@@ -4,38 +4,35 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package Newspack
+ * @package lapp-classic-theme
  */
 get_header();
 
-$feature_latest_post = get_theme_mod( 'archive_feature_latest_post', true );
-$show_excerpt        = get_theme_mod( 'archive_show_excerpt', false );
+if ( function_exists( 'newspack_get_all_sponsors' ) ) {
+	$all_sponsors    = newspack_get_all_sponsors( get_queried_object_id() );
+	$native_sponsors = newspack_get_native_sponsors( $all_sponsors );
+}
+$args = ( $all_sponsors ) ? array( 'all_sponsors' => $all_sponsors ) : array();
 ?>
 
 	<section id="primary" class="content-area">
 
-		<header class="page-header">
-			<span>
-
-				<?php the_archive_title( '<h1 class="page-title">', '</h1>' ); ?>
-
-				<?php do_action( 'newspack_theme_below_archive_title' ); ?>
-
-				<div class="taxonomy-description">
-					<?php echo wp_kses_post( wpautop( get_the_archive_description() ) ); ?>
-				</div>
-
-			</span>
-
-		</header><!-- .page-header -->
+		<?php get_template_part( 'template-parts/header/entry-header', 'topic' ); ?>
 
 		<?php do_action( 'before_archive_posts' ); ?>
 
 		<main id="main" class="site-main">
 
-		<?php
-		get_template_part( 'template-parts/content/content-taxonomy', 'topic' );
-		?>
+			<?php
+			get_template_part(
+				'template-parts/content/content-taxonomy',
+				'topic',
+				array(
+					'template_type' => $template_type,
+				)
+			);
+			?>
+			
 		</main><!-- #main -->
 		<?php
 		$archive_layout = get_theme_mod( 'archive_layout', 'default' );
