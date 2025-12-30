@@ -120,8 +120,8 @@
             "newspack-theme-font-heading": "var( --wp--preset--font-family--serif )"
 		},
 		"layout": {
-			"contentSize": "800px",
-			"wideSize": "1216px"
+			"contentSize": "780px",
+			"wideSize": "1200px"
 		},
 		"typography": {
 			"dropCap": true,

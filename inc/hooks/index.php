@@ -6,6 +6,7 @@
  *
  * @package lapp-classic-theme
  */
+namespace Lapp_Classic;
 
 /**
  * Modify archive title
@@ -14,7 +15,7 @@
  *
  * @return string
  */
-function lapp_archive_title( string $title ): string {
+function archive_title( string $title ): string {
 	if ( is_category() ) {
 		$title = single_cat_title( '', false );
 	} elseif ( is_tag() ) {
@@ -26,7 +27,25 @@ function lapp_archive_title( string $title ): string {
 	} elseif ( is_tax() ) {
 		$title = single_term_title( '', false );
 	}
- 
+
 	return $title;
 }
-add_filter( 'get_the_archive_title', 'lapp_archive_title' );
+add_filter( 'get_the_archive_title', __NAMESPACE__ . '\archive_title' );
+
+/**
+ * Filter body class
+ *
+ * @param array $classes
+ *
+ * @return array
+ */
+function body_class( array $classes ): array {
+	if ( is_tax( 'topic' ) ) {
+		$term_id       = get_queried_object_id();
+		$template_type = get_term_meta( $term_id, 'template_type', true );
+		$classes[]     = $template_type . '-page';
+	}
+
+	return $classes;
+}
+\add_filter( 'body_class', __NAMESPACE__ . '\body_class' );

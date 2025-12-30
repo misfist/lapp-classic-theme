@@ -1,0 +1,34 @@
+# Editors
+project.xml
+project.properties
+/nbproject/private/
+.buildpath
+.project
+.settings*
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+.sublimelinterrc
+
+# Composer
+/vendor/
+
+# NPM
+node_modules/
+.cache
+
+# OS X metadata
+.DS_Store
+
+# Windows junk
+Thumbs.db
+
+# Compiled Javascript
+/dist/
+
+# Build images
+/images/
+
+# Release folder
+/release/
