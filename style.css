@@ -55,7 +55,8 @@ Version:        0.1.0
 
 .wp-block-button,
 .tertiary-menu a,
-button {
+button,
+.wp-block-button__link {
 	text-transform: uppercase;
 }
 
@@ -64,7 +65,8 @@ button {
 figcaption,
 .wp-block-button,
 .tertiary-menu a,
-button {
+button,
+.wp-block-button__link {
 	font-family: var( --wp--preset--font-family--sans );
 }
 
@@ -87,4 +89,10 @@ button {
     padding-left: 0 !important;
 }
 
-.no-sidebar {}
+.tax-topic .highlight-menu-contain.desktop-only {
+	display: none;
+}
+
+.tax-topic .site-content {
+	margin-top: 0;
+}
