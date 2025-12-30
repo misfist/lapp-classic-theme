@@ -11,6 +11,5 @@ $template_type = get_term_meta( $term_id, 'template_type', true );
 ?>
 
 <header class="page-header">
-	<h2><?php echo ucfirst( $template_type ); ?></h2>
 	<?php render_block_pattern_content( 'lapp/hero-topic' ); ?>
 </header><!-- .page-header -->
