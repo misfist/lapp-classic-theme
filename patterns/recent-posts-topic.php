@@ -1,8 +1,8 @@
 <?php
 /**
- * Title: Featured Posts - Topic
- * Slug: lapp/featured-topic
- * Description: Featured posts for Topic
+ * Title: Recent Posts - Topic
+ * Slug: lapp/recent-posts-topic
+ * Description: Recent posts for Topic
  * Categories: page-query, topic
  * Keywords: topics
  * Inserter: true
@@ -10,17 +10,11 @@
  * Template Types: taxonomy-topic
  */
 $queried_obj = get_queried_object_id();
-
-if ( function_exists( 'newspack_get_all_sponsors' ) ) {
-	$all_sponsors    = newspack_get_all_sponsors( $queried_obj );
-	$native_sponsors = newspack_get_native_sponsors( $all_sponsors );
-}
-
 $featured_meta  = get_term_meta( (int) $queried_obj, 'featured_posts', true ) ?? array();
 $featured_posts = implode( ',', $featured_meta );
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Featured Posts"},"align":"full","backgroundColor":"base-2","layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull has-base-2-background-color has-background">
+<!-- wp:group {"tagName":"section","metadata":{"name":"Featured Posts"},"align":"full","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull">
 	<!-- wp:newspack-blocks/homepage-articles {
 		"showExcerpt": false,
 		"showAvatar": false,
@@ -31,8 +25,10 @@ $featured_posts = implode( ',', $featured_meta );
 				"terms": [<?php echo $queried_obj; ?>]
 			}
 		],
-		"specificPosts": [<?php echo $featured_posts; ?>],
-		"sectionHeader": "Featured Posts",
+		"specificPosts": [],
+        "excludeIds": [<?php echo $featured_posts; ?>],
+        "postsToShow": 9,
+		"sectionHeader": "Latest Posts",
 		"specificMode": true,
 		"align": "wide"
 	} /-->
