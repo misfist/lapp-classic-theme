@@ -1,7 +1,7 @@
 <?php
 /**
  * Title: Related Topics
- * Slug: lapp/related-topics
+ * Slug: lapp/related-topic
  * Description: Topics designated as related to current
  * Categories: topic
  * Keywords: topics
@@ -10,6 +10,7 @@
  */
 $queried_obj   = get_queried_object_id();
 $related_terms = get_term_meta( (int) $queried_obj, 'related_terms', true ) ?? array();
+
 if ( empty( $related_terms ) ) {
 	return;
 }
@@ -18,8 +19,8 @@ $related_term_ids = implode(
 	array_map( 'absint', $related_terms )
 );
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Related Terms"},"backgroundColor":"base-2","align":"full","layout":{"type":"constrained"}} -->
-<section class="wp-block-group alignfull has-base-2-background-color has-background">
+<!-- wp:group {"tagName":"section","metadata":{"name":"Related Terms"},"align":"wide","className":"is-style-border","backgroundColor":"accent-3","layout":{"type":"constrained","wideSize":"1200px"}} -->
+<section class="wp-block-group alignwide is-style-border has-accent-3-background-color has-background">
 	
 	<!-- wp:terms-query {
 		"termQuery": {
@@ -37,8 +38,8 @@ $related_term_ids = implode(
 		"align":"wide"
 	} -->
 	<div class="wp-block-terms-query alignwide">
-		<!-- wp:heading -->
-			<h2 class="wp-block-heading"><?php esc_html_e( 'Related Topics', 'lapp' ); ?></h2>
+		<!-- wp:heading {"align":"wide"} -->
+			<h2 class="wp-block-heading alignwide"><?php esc_html_e( 'Related Topics', 'lapp' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:term-template -->

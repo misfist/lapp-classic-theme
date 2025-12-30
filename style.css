@@ -29,9 +29,10 @@ Version:        0.1.0
 	font-size: var( --newspack-theme-font-size-xxxxl );
 }
 
+
 .alignfull {
-	margin-left: calc(50% - 50vw);
-	margin-right: calc(50% - 50vw);
+	margin-left: calc( 50% - 50vw );
+	margin-right: calc( 50% - 50vw );
 	max-width: 100vw;
 }
 
