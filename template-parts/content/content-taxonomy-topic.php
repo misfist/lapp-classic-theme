@@ -25,4 +25,6 @@ $template_type = get_term_meta( $term_id, 'template_type', true );
 
 	<?php render_block_pattern_content( 'lapp/recent-posts-topic' ); ?>
 
+    <?php render_block_pattern_content( 'lapp/related-topics' ); ?>
+
 </div>

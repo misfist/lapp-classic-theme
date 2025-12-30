@@ -11,7 +11,9 @@
  */
 $queried_obj = get_queried_object_id();
 $featured_meta  = get_term_meta( (int) $queried_obj, 'featured_posts', true ) ?? array();
-$featured_posts = implode( ',', $featured_meta );
+if( ! empty( $featured_meta ) ) {
+    $featured_posts = implode( ',', $featured_meta );
+}
 ?>
 <!-- wp:group {"tagName":"section","metadata":{"name":"Featured Posts"},"backgroundColor":"base","align":"full","layout":{"type":"constrained"}} -->
 <section class="wp-block-group alignfull has-base-background-color has-background">
@@ -26,7 +28,7 @@ $featured_posts = implode( ',', $featured_meta );
 			}
 		],
 		"specificPosts": [],
-        "excludeIds": [<?php echo $featured_posts; ?>],
+        "excludeIds": [<?php echo $featured_posts ?? ''; ?>],
         "postsToShow": 9,
 		"sectionHeader": "Latest Posts",
 		"specificMode": true,
