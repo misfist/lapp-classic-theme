@@ -33,7 +33,8 @@ if ( function_exists( 'newspack_get_all_sponsors' ) ) {
 
         <!-- wp:term-description {"metadata":{"name":"Term Description"},"className":"taxonomy-description"} /-->
 
-        <!-- wp:lapp/sponsor {"objectId":"<?php echo get_queried_object_id() ?>","objectType":"term} /-->
+        <!-- wp:site-functionality/sponsor {"objectId":"<?php echo get_queried_object_id() ?>","objectType":"term} /-->
+        
 
     </div>
 </div>
