@@ -8,11 +8,56 @@ Template:       newspack-theme
 Version:        0.1.0
 */
 
+.archive #main, 
+.blog #main, 
+.page .main-content, 
+.search #main, 
+.single .main-content {
+	margin-right: auto;
+	margin-left: auto
+}
+
 .is-content-justification-center > * {
     text-align: center;
+}
+
+.tertiary-menu a {
+	background: var( --wp--preset--color--accent-2 );
+	color: var( --wp--preset--color--base );
+}
+
+.wp-block-button,
+.tertiary-menu a,
+button {
+	text-transform: uppercase;
+}
+
+.cat-links,
+.entry-meta,
+figcaption,
+.wp-block-button,
+.tertiary-menu a,
+button {
+	font-family: var( --wp--preset--font-family--sans );
+}
+
+.cat-links a {
+	background: var( --wp--preset--color--contrast );
+}
+
+.entry-meta a,
+.entry-meta .byline a {
+	color: var( --wp--preset--color--contrast );
+}
+
+.sd-social-icon .sd-content ul li[class*="share-"] a.sd-button.share-icon {
+	background: var( --wp--preset--color--base ) !important;
+	color: var( --wp--preset--color--contrast ) !important;
 }
 
 .wp-block-site-functionality-cta-slot.alignfull {
     padding-right: 0 !important;
     padding-left: 0 !important;
 }
+
+.no-sidebar {}
