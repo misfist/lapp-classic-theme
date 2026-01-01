@@ -180,6 +180,12 @@
 			"heading": {
 				"typography": {
 					"fontFamily": "var( --wp--preset--font-family--serif )"
+            },
+            "core/list": {
+				"variations": {
+					"no-bullets": {
+						"css": "&.is-style-no-bullets{list-style:none;padding-left:0;margin-left:0;} &.is-style-no-bullets li:not(:last-child) {margin-bottom:var( --wp--preset--spacing--20 );}"
+					}
 				}
 			},
 			"link": {
