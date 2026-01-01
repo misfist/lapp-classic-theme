@@ -1,7 +1,20 @@
 {
-	"settings": {
-		"color": {
-			"palette": [
+    "settings": {
+        "background": {
+            "backgroundImage": true
+        },
+        "border": {
+            "color": true,
+            "radius": true,
+            "style": true,
+            "width": true
+        },
+        "color": {
+            "link": true,
+            "custom": false,
+            "defaultPalette": false,
+            "defaultGradients": false,
+            "palette": [
                 {
                     "name": "Base",
                     "slug": "base",
@@ -113,20 +126,25 @@
                     "color": "var( --wp--preset--color--base-2 )"
                 }
             ]
-		},
-		"custom": {
-			"className": "lapp",
+        },
+        "custom": {
+            "className": "lapp",
             "newspack-theme-font-body": "var( --wp--preset--font-family--sans )",
             "newspack-theme-font-heading": "var( --wp--preset--font-family--serif )"
-		},
-		"layout": {
-			"contentSize": "780px",
-			"wideSize": "1200px"
-		},
-		"typography": {
-			"dropCap": true,
-			"fluid": true,
-			"fontFamilies": [
+        },
+        "layout": {
+            "contentSize": "780px",
+            "wideSize": "1200px"
+        },
+        "spacing": {
+            "customSpacingSize": false,
+            "blockGap": true
+        },
+        "typography": {
+            "dropCap": true,
+            "customFontSize": false,
+            "fluid": true,
+            "fontFamilies": [
                 {
                     "name": "Lora",
                     "slug": "serif",
@@ -143,43 +161,24 @@
                     "fontFamily": "\"Staatliches\", sans-serif"
                 }
             ]
-		}
-	},
-	"styles": {
-		"blocks": {
-			"core/button": {
-				"border": {
-					"radius": "5px"
-				},
-				"typography": {
-					"fontStyle": "normal",
-					"fontWeight": "700",
-					"textTransform": "uppercase"
-				}
-			},
-			"core/pullquote": {
-				"color": {
-					"text": "var( --wp--preset--color--contrast-2 )"
-				}
-			}
-		},
-		"elements": {
-			"button": {
-				"color": {
-					"background": "var( --wp--preset--color--accent-2 )"
-				},
-				"typography": {
-					"fontFamily": "var( --wp--preset--font-family--sans )"
-				}
-			},
-			"caption": {
-				"color": {
-					"text": "var( --wp--preset--color--base-5 )"
-				}
-			},
-			"heading": {
-				"typography": {
-					"fontFamily": "var( --wp--preset--font-family--serif )"
+        }
+    },
+    "styles": {
+        "blocks": {
+            "core/button": {
+                "color": {
+                    "background": "var( --wp--preset--color--accent-2 )",
+                    "text": "var( --wp--preset--color--base )"
+                },
+                "border": {
+                    "radius": "5px"
+                },
+                "typography": {
+                    "fontStyle": "normal",
+                    "fontWeight": "700",
+                    "textTransform": "uppercase",
+                    "fontFamily": "var( --wp--preset--font-family--sans )"
+                }
             },
             "core/list": {
 				"variations": {
@@ -188,16 +187,43 @@
 					}
 				}
 			},
-			"link": {
-				"color": {
-					"text": "var( --wp--preset--color--contrast )"
-				}
-			}
-		},
-		"typography": {
-			"fontFamily": "var( --wp--preset--font-family--serif )"
-		}
-	},
-	"version": 3,
-	"$schema": "https://schemas.wp.org/wp/6.8/theme.json"
+            "core/pullquote": {
+                "color": {
+                    "text": "var( --wp--preset--color--contrast-2 )"
+                }
+            }
+        },
+        "elements": {
+            "button": {
+                "color": {
+                    "background": "var( --wp--preset--color--accent-2 )",
+                    "text": "var( --wp--preset--color--base )"
+                },
+                "typography": {
+                    "fontFamily": "var( --wp--preset--font-family--sans )",
+                    "textTransform": "uppercase"
+                }
+            },
+            "caption": {
+                "color": {
+                    "text": "var( --wp--preset--color--base-5 )"
+                }
+            },
+            "heading": {
+                "typography": {
+                    "fontFamily": "var( --wp--preset--font-family--serif )"
+                }
+            },
+            "link": {
+                "color": {
+                    "text": "var( --wp--preset--color--contrast )"
+                }
+            }
+        },
+        "typography": {
+            "fontFamily": "var( --wp--preset--font-family--sans )"
+        }
+    },
+    "version": 3,
+    "$schema": "https://schemas.wp.org/wp/6.8/theme.json"
 }
