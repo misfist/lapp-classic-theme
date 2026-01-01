@@ -62,3 +62,21 @@ function allowed_block_types( $allowed_block_types, $editor_context ) {
 	return $allowed_block_types;
 }
 add_filter( 'allowed_block_types_all', __NAMESPACE__ . '\\allowed_block_types', 10, 2 );
+
+/**
+ * Add block styles
+ * 
+ * @see https://developer.wordpress.org/block-editor/reference-guides/block-api/block-styles/#server-side-registration-helper
+ *
+ * @return void
+ */
+function register_block_styles(): void {
+	register_block_style(
+		array( 'core/list' ),
+		array(
+			'name'       => 'no-bullets',
+			'label'      => __( 'No Bullets', 'lapp' ),
+		)
+	);
+}
+add_action( 'init', __NAMESPACE__ . '\\register_block_styles' );

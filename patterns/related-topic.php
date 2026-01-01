@@ -19,8 +19,8 @@ $related_term_ids = implode(
 	array_map( 'absint', $related_terms )
 );
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Related Terms"},"align":"wide","className":"is-style-border","backgroundColor":"accent-3","layout":{"type":"constrained","wideSize":"1200px"}} -->
-<section class="wp-block-group alignwide is-style-border has-accent-3-background-color has-background">
+<!-- wp:group {"tagName":"section","metadata":{"name":"Related Terms"},"backgroundColor":"accent-3","layout":{"type":"constrained","wideSize":"1200px"}} -->
+<section class="wp-block-group has-accent-3-background-color has-background">
 	
 	<!-- wp:terms-query {
 		"termQuery": {
@@ -37,9 +37,9 @@ $related_term_ids = implode(
 		},
 		"align":"wide"
 	} -->
-	<div class="wp-block-terms-query alignwide">
-		<!-- wp:heading {"align":"wide"} -->
-			<h2 class="wp-block-heading alignwide"><?php esc_html_e( 'Related Topics', 'lapp' ); ?></h2>
+	<div class="wp-block-terms-query">
+		<!-- wp:heading -->
+			<h2 class="wp-block-heading"><?php esc_html_e( 'Related Topics', 'lapp' ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:term-template -->

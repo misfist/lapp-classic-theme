@@ -17,15 +17,15 @@ if ( ! $has_resources ) {
 $resources = get_repeater_values( $queried_obj, 'term', 'resources', 'resource' );
 
 ?>
-<!-- wp:group {"tagName":"section","metadata":{"name":"Resources"},"align":"wide","className":"is-style-border","backgroundColor":"accent-4","layout":{"type":"constrained","wideSize":"1200px"}} -->
-<section class="wp-block-group alignwide is-style-border has-accent-4-background-color has-background">
+<!-- wp:group {"tagName":"section","metadata":{"name":"Resources"},"className":"is-style-border","backgroundColor":"accent-4","layout":{"type":"constrained","wideSize":"1200px"}} -->
+<section class="wp-block-group is-style-border has-accent-4-background-color has-background">
 
-	<!-- wp:heading {"align":"wide"} -->
-	<h2 class="wp-block-heading alignwide"><?php esc_html_e( 'Resources', 'lapp' ); ?></h2>
+	<!-- wp:heading -->
+	<h2 class="wp-block-heading"><?php esc_html_e( 'Resources', 'lapp' ); ?></h2>
 	<!-- /wp:heading -->
 
-	<!-- wp:list {"className":"no-bullets alignwide"} -->
-	<ul class="wp-block-list no-bullets alignwide">
+	<!-- wp:list {"className":"is-style-no-bullets"} -->
+	<ul class="wp-block-list is-style-no-bullets">
 
 		<?php
 		foreach( $resources as $resource ) :

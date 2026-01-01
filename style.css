@@ -7,6 +7,27 @@ Author URI:     https://pealutz.me
 Template:       newspack-theme
 Version:        0.1.0
 */
+--newspack-theme-color-secondary
+:root {
+	--newspack-theme-color-primary: var( --wp--preset--color--accent-2 );
+	--newspack-theme-color-primary-variation: var( --wp--preset--color--accent-3 );
+	--newspack-theme-color-secondary: var( --wp--preset--color--accent-2 ) !important;
+	--newspack-theme-color-secondary-variation: var( --wp--preset--color--accent-4 );
+	--newspack-theme-color-primary-against-white: var( --wp--preset--color--accent-2 );
+
+	--newspack-ui-color-button-bg: var( --wp--preset--color--accent-2 );
+	--newspack-ui-color-button-bg-hover: var( --wp--preset--color--contrast );
+	--newspack-ui-color-button-text: var( --wp--preset--color--base );
+	--newspack-ui-color-button-text-hover: var( --wp--preset--color--base );
+}
+
+.has-sm-font-size {
+	font-size: .8rem;
+}
+
+.has-md-font-size {
+	font-size: var( --newspack-theme-font-size-md );
+}
 
 .has-lg-font-size {
 	font-size: var( --newspack-theme-font-size-lg );
@@ -29,11 +50,29 @@ Version:        0.1.0
 	font-size: var( --newspack-theme-font-size-xxxxl );
 }
 
+.wp-block-group.alignwide,
+.wp-block-columns.alignwide {
+	max-width: 90vw;
+	width: var( --wp--style--global--wide-size );
+}
 
 .alignfull {
 	margin-left: calc( 50% - 50vw );
 	margin-right: calc( 50% - 50vw );
 	max-width: 100vw;
+}
+
+.wp-block-button__link {
+	background-color: var( --wp--preset--color--accent-2 );
+	color: var( --wp--preset--color--base );
+}
+
+.entry-container .wp-block-column {
+	display: flex;
+}
+
+.entry-container .wp-block-column > .wp-block-group {
+	flex: 1;
 }
 
 .archive #main, 
@@ -96,4 +135,21 @@ button,
 
 .tax-topic .site-content {
 	margin-top: 0;
+}
+
+.wpnbha h2.article-section-title {
+	font-size: var( --newspack-theme-font-size-xl );
+	color: inherit;
+}
+
+.wp-block-post-template-is-layout-grid {
+	gap: 2em;
+}
+
+.wp-block-post-template-is-layout-grid .entry {
+	margin-top: 0;
+}
+
+.wp-block-post-template-is-layout-grid  .wp-block-columns {
+	margin-bottom: 0;
 }
