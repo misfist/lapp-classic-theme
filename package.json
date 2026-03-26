@@ -13,6 +13,7 @@
 		"format": "wp-scripts format",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
-		"packages-update": "wp-scripts packages-update"
+		"packages-update": "wp-scripts packages-update",
+		"dist": "zip -r lapp-classic-theme.zip . -x '*.git*' -x 'node_modules/*' -x 'src/*' -x 'package*.json' -x 'webpack.config.js' -x '.stylelintrc.json' -x '.distignore' -x '.gitignore'"
 	}
 }
