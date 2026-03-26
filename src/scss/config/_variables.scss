@@ -1,0 +1,13 @@
+// Newspack theme CSS variable overrides
+:root {
+	--newspack-theme-color-primary: var( --wp--preset--color--accent-2 );
+	--newspack-theme-color-primary-variation: var( --wp--preset--color--accent-3 );
+	--newspack-theme-color-secondary: var( --wp--preset--color--accent-2 );
+	--newspack-theme-color-secondary-variation: var( --wp--preset--color--accent-4 );
+	--newspack-theme-color-primary-against-white: var( --wp--preset--color--accent-2 );
+
+	--newspack-ui-color-button-bg: var( --wp--preset--color--accent-2 );
+	--newspack-ui-color-button-bg-hover: var( --wp--preset--color--contrast );
+	--newspack-ui-color-button-text: var( --wp--preset--color--base );
+	--newspack-ui-color-button-text-hover: var( --wp--preset--color--base );
+}

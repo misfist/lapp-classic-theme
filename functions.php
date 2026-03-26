@@ -7,23 +7,6 @@
  * @package lapp-classic-theme
  */
 
-/**
- * Enqueue styles
- *
- * @return void
- */
-function lapp_parent_enqueue_styles(): void {
-	wp_register_style( 'newspack-style', get_template_directory_uri() . '/style.css' );
-
-	wp_enqueue_style(
-		'lapp-classic-theme-style',
-		get_stylesheet_directory_uri() . '/style.css',
-		array( 'newspack-style' ),
-		'0.1.0'
-	);
-}
-add_action( 'wp_enqueue_scripts', 'lapp_parent_enqueue_styles' );
-
 
 /**
  * Get all the include files for the theme.

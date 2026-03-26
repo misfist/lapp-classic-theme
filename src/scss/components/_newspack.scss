@@ -1,0 +1,9 @@
+.wpnbha h2.article-section-title {
+	font-size: var( --newspack-theme-font-size-xl );
+	color: inherit;
+}
+
+.sd-social-icon .sd-content ul li[class*='share-'] a.sd-button.share-icon {
+	background: var( --wp--preset--color--base ) !important;
+	color: var( --wp--preset--color--contrast ) !important;
+}
