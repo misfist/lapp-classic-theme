@@ -1,0 +1,23 @@
+.wp-block-group.alignwide,
+.wp-block-columns.alignwide {
+	max-width: 90vw;
+	width: var( --wp--style--global--wide-size );
+}
+
+.alignfull {
+	margin-left: calc( 50% - 50vw );
+	margin-right: calc( 50% - 50vw );
+	max-width: 100vw;
+}
+
+.entry-container .wp-block-column {
+	display: flex;
+}
+
+.entry-container .wp-block-column > .wp-block-group {
+	flex: 1;
+}
+
+.is-content-justification-center > * {
+	text-align: center;
+}

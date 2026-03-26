@@ -1,0 +1,28 @@
+.has-sm-font-size {
+	font-size: .8rem;
+}
+
+.has-md-font-size {
+	font-size: var( --newspack-theme-font-size-md );
+}
+
+.has-lg-font-size {
+	font-size: var( --newspack-theme-font-size-lg );
+}
+
+.has-xl-font-size {
+	font-size: var( --newspack-theme-font-size-xl );
+}
+
+.has-xxl-font-size {
+	font-size: var( --newspack-theme-font-size-xxl );
+}
+
+.has-xxxl-font-size {
+	font-size: var( --newspack-theme-font-size-xxxl );
+}
+
+.has-xxxxl-font-size,
+.archive .entry-title.has-xxxxl-font-size {
+	font-size: var( --newspack-theme-font-size-xxxxl );
+}

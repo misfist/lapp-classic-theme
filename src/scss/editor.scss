@@ -1,1 +1,7 @@
-// lapp-classic-theme editor styles
+// Elements
+@use 'elements/typography';
+@use 'elements/buttons';
+
+// Components
+@use 'components/layout';
+@use 'components/blocks';
