@@ -14,3 +14,13 @@ namespace Lapp_Classic;
 \add_theme_support( 'block-templates' );
 
 \add_theme_support( 'block-template-parts' );
+
+/**
+ * Load Block Editor Styles
+ *
+ * @return void
+ */
+function setup_editor_styles(): void {
+	\add_editor_style( 'build/editor-style.css' );
+}
+\add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_editor_styles' );

@@ -51,4 +51,4 @@ function enqueue_editor_styles(): void {
 		$asset['version']
 	);
 }
-\add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_styles' );
+// \add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\enqueue_editor_styles' );

@@ -18,6 +18,9 @@ project.properties
 node_modules/
 .cache
 
+# Distribution
+*.zip
+
 # OS X metadata
 .DS_Store
 
