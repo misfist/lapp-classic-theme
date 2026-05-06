@@ -1,0 +1,8 @@
+node_modules/
+src/
+.distignore
+.gitignore
+.stylelintrc.json
+webpack.config.js
+package.json
+package-lock.json
